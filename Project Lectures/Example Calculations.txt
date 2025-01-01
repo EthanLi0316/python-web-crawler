@@ -1,0 +1,131 @@
+
+
+doc1 = "apple apple peach peach apple peach apple"
+doc2 = "apple apple apple apple apple apple apple"
+doc3 = "banana peach banana banana banana peach peach peach peach peach peach"
+doc4 = "banana banana banana"
+
+
+# documents: 4
+
+Unique words:
+Apple
+Banana
+Peach
+
+
+# words in documents:
+Doc1 = 7
+Doc2 = 7
+Doc3 = 11
+Doc4 = 3
+
+
+Term Frequencies:
+(Apple, Doc1) = 4/7 	= 0.571
+(Apple, Doc2) = 7/7 	= 1
+(Apple, Doc3) = 0/7 	= 0
+(Apple, Doc4) =  0/7 	= 0
+(Banana, Doc1) = 0/7 	= 0
+(Banana, Doc2) = 0/7 	= 0
+(Banana, Doc3) = 4/11 	= 0.364
+(Banana, Doc4) = 3/3 	= 1
+(Peach, Doc1) = 3/7 	= 0.429
+(Peach, Doc2) = 0/7 	= 0
+(Peach, Doc3) = 7/11 	= 0.637
+(Peach, Doc4) = 0/3 	= 0
+
+
+IDFs:
+Apple = log(4/3)	= 0.415
+Banana = log(4/3)	= 0.415
+Peach =  log(4/3)	= 0.415
+
+
+tf-idfs:
+(Apple, Doc1) = log(1.571) x 0.415	= 0.2704
+(Apple, Doc2) = log(2) x 0.415	= 0.415
+(Apple, Doc3) = log(1) x 0.415	= 0
+(Apple, Doc4) = log(1) x 0.415	= 0
+(Banana, Doc1) = log(1) x 0.415 	= 0
+(Banana, Doc2) = log(1) x 0.415	= 0
+(Banana, Doc3) = log(1.364)x0.415	= 0.1858
+(Banana, Doc4) = log(2) x 0.415	= 0.415
+(Peach, Doc1) = log(1.429) x 0.415	= 0.2137
+(Peach, Doc2) = log(1) x 0.415	= 0
+(Peach, Doc3) = log(1.637) x 0.415	= 0.2951
+(Peach, Doc4) = log(1) x 0.415	= 0
+
+
+
+Vectors for Documents:
+All = [Apple, Banana, Peach]
+Doc1 = [ 0.2704, 0, 0.2137 ]
+Doc2 = [ 0.415, 0, 0 ]
+Doc3 = [ 0, 0.1858, 0.2951 ]
+Doc4 = [ 0, 0.415, 0 ]
+
+
+Query = "apple peach"
+Tf-idf of Apple in query: log(1.5) x 0.415 = 0.2428 
+Tf-idf of peach in query: log(1.5) x 0.415 = 0.2428
+
+Query vector:
+[0.2428, 0.2428]
+
+
+Cosine Similarity for Query/Doc1:
+Doc1 = [ 0.2704, 0.2137 ]
+
+Numerator = (0.2428 * 0.2704) + (0.2428 * 0.2137) 	= 0.1175
+Left Denom = sqrt((0.2428*0.2428)+(0.2428*0.2428))	= 0.3434
+Right Denom = sqrt((0.2704*0.2704)+(0.2137*0.2137))	= 0.3447
+Cosine Similarity = 0.993
+
+
+
+Cosine Similarity for Query/Doc2:
+Doc2 = [ 0.415, 0 ]
+
+Numerator = (0.2428 * 0.415) + (0.2428 * 0) 		= 0.1008
+Left Denom = sqrt((0.2428*0.2428)+(0.2428*0.2428))	= 0.3434
+Right Denom = sqrt((0.415 * 0.415)+(0 * 0))		= 0.415
+Cosine Similarity = 0.7073
+
+
+
+
+Cosine Similarity for Query/Doc3:
+Doc3 = [ 0, 0.2951 ]
+
+Numerator = (0.2428 * 0) + (0.2428 * 0.2951) 		= 0.0717
+Left Denom = sqrt((0.2428*0.2428)+(0.2428*0.2428))	= 0.3434
+Right Denom = sqrt((0*0)+(0.2951*0.2951))		= 0.2951
+Cosine Similarity = 0.7075
+
+
+
+
+Cosine Similarity for Query/Doc4:
+Doc4 = [ 0, 0 ]
+
+Numerator = (0.2428 * 0) + (0.2428 * 0) 	= 0
+Cosine Similarity = 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

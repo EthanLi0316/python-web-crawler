@@ -1,0 +1,22 @@
+This tutorial is done by both Ethan Li 101290626 and Bowen Zhang 101321012. We have declared partnership on the Partner Declaration Form on Brightspace. 
+Thank you.
+
+instructions for running your crawler and search engine from the command line：
+
+	1. run the crawler:
+	- open the terminal
+	- make sure the command line is in the same directory with project's python files. 
+	- make sure you have a file named crawler_config.txt that contains teh seed URL for the crawler. The URL does not need quotation marks. 
+	e.g. http://people.scs.carleton.ca/~davidmckenney/fruits2/N-0.html
+	- In the terminal, type python crawler.py and press enter. This will start to crawl the URL and the returned value fo crawl(seed) is save in the crawler_output.txt
+
+	2. run the search(phrase, boost)
+	- make sure you are in the same directory with the search.py and searchdata.py in the command line. 
+	- make sure the directory has the file name search_config.txt   
+	the first line should contain the phrase
+	and the second line hould contain teh boost value(True or False)
+	e.g.
+	apple tomato tomato tomato
+	True
+	- to start use search in the terminal, enter python search.py after you configged search_config.txt
+	the result will be stored as search_results.json in the same directory. 
