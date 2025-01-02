@@ -1,7 +1,7 @@
 ## Python Web Crawler
 
 - **Technologies**: Python
-- **Description**: Developed a Python-based web crawler with a focus on minimizing runtime complexity. Utilized `os` and `json` modules for efficient data handling and reduced I/O operations. This project was a collaborative effort between Ethan Li and Bowen Zhang.
+- **Description**: Developed a Python-based web crawler with a focus on minimizing runtime complexity. Utilized `os` and `json` modules for efficient data handling and reduced I/O operations. This project was created by Ethan Li and Bowen Zhang.
 
 #### Instructions for Running the Crawler and Search Engine
 
