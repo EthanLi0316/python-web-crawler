@@ -1,21 +1,40 @@
-This course project is done by both Ethan Li and Bowen Zhang. 
+### Python Web Crawler
 
-instructions for running your crawler and search engine from the command line：
+- **Technologies**: Python
+- **Description**: Developed a Python-based web crawler with a focus on minimizing runtime complexity. Utilized `os` and `json` modules for efficient data handling and reduced I/O operations. This project was a collaborative effort between Ethan Li and Bowen Zhang.
 
-	1. run the crawler:
-	- open the terminal
-	- make sure the command line is in the same directory with project's python files. 
-	- make sure you have a file named crawler_config.txt that contains teh seed URL for the crawler. The URL does not need quotation marks. 
-	e.g. http://people.scs.carleton.ca/~davidmckenney/fruits2/N-0.html
-	- In the terminal, type python crawler.py and press enter. This will start to crawl the URL and the returned value fo crawl(seed) is save in the crawler_output.txt
+#### Instructions for Running the Crawler and Search Engine
 
-	2. run the search(phrase, boost)
-	- make sure you are in the same directory with the search.py and searchdata.py in the command line. 
-	- make sure the directory has the file name search_config.txt   
-	the first line should contain the phrase
-	and the second line hould contain teh boost value(True or False)
-	e.g.
-	apple tomato tomato tomato
-	True
-	- to start use search in the terminal, enter python search.py after you configged search_config.txt
-	the result will be stored as search_results.json in the same directory. 
+##### Running the Crawler
+
+1. **Open the Terminal**:
+   - Ensure your command line is in the directory containing the project's Python files.
+
+2. **Prepare the Configuration**:
+   - Create a file named `crawler_config.txt` in the same directory. This file should contain the seed URL for the crawler without quotation marks.
+   - Example seed URL: `http://people.scs.carleton.ca/~davidmckenney/fruits2/N-0.html`
+
+3. **Execute the Crawler**:
+   - In the terminal, type `python crawler.py` and press Enter.
+   - The crawler will start processing the seed URL, and the output will be saved in `crawler_output.txt`.
+
+##### Running the Search Engine
+
+1. **Prepare the Configuration**:
+   - Ensure you have a file named `search_config.txt` in the directory. This file should contain:
+     - The search phrase on the first line.
+     - The boost value (`True` or `False`) on the second line.
+   - Example configuration:
+     ```
+     apple tomato tomato tomato
+     True
+     ```
+
+2. **Execute the Search**:
+   - In the terminal, ensure you are in the directory with `search.py` and `searchdata.py`.
+   - Type `python search.py` and press Enter.
+   - The search results will be stored in `search_results.json` in the same directory.
+
+---
+
+This section provides clear and concise instructions for setting up and running your web crawler and search engine, ensuring a professional presentation of your project. Feel free to adjust any details to better fit your project's specifics or additional features.
