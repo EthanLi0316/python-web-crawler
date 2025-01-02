@@ -34,7 +34,3 @@
    - In the terminal, ensure you are in the directory with `search.py` and `searchdata.py`.
    - Type `python search.py` and press Enter.
    - The search results will be stored in `search_results.json` in the same directory.
-
----
-
-This section provides clear and concise instructions for setting up and running your web crawler and search engine, ensuring a professional presentation of your project. Feel free to adjust any details to better fit your project's specifics or additional features.
